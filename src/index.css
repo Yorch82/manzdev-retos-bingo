@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   background-image: linear-gradient(to bottom, #2455c0, #0b142c);
   height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 #juego {
@@ -21,7 +21,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  padding: 15px;
+  padding: 20px;
+  margin-top: 50px;
 }
 
 .carton {
@@ -48,10 +49,11 @@ body {
 .down {
   width: 70%;
   height: 50vh;
-  border: 1px solid red;
+  border: 1px solid white;
+  padding: 15px;
 }
 
-.etiqueta{
+.etiqueta {
   text-align: center;
   margin: 15px auto;
   font-weight: 700;
@@ -66,5 +68,23 @@ body {
   line-height: 48px;
   margin: 2px;
   text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.tachado {
+  display: inline-block;
+  color: #54090d;
+  background-color: #9e1c23;
+  width: 54px;
+  line-height: 48px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: line-through;
   font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.hide {
+  display: none;
 }
