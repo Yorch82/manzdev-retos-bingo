@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Fauna+One&family=Montserrat:wght@200;400;500;700&family=Poppins:wght@200;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom, #2455c0, #0b142c);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+#juego {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  padding: 15px;
+}
+
+.carton {
+  width: 300px;
+  height: 225px;
+  margin: auto;
+  text-align: center;
+  background-color: #9e1c23;
+  color: white;
+  box-shadow: 0 0 10px black;
+}
+
+#bombo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-image: linear-gradient(gray, white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.down {
+  width: 70%;
+  height: 50vh;
+  border: 1px solid red;
+}
+
+.etiqueta{
+  text-align: center;
+  margin: 15px auto;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.numero {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  width: 54px;
+  line-height: 48px;
+  margin: 2px;
+  text-align: center;
+  font-weight: 700;
+}
