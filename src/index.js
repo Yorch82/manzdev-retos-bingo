@@ -1,3 +1,4 @@
+import confetti from "canvas-confetti";
 const startButton = document.getElementById("button");
 
 const bolasSacadas = [];
@@ -71,19 +72,30 @@ function sacarBola() {
   const totalJugador = document.querySelectorAll(".player .tachado").length;
   const totalCpu = document.querySelectorAll(".cpu .tachado").length;
   if (totalJugador === 15) {
-    startButton.classList.add("hide");
-    const parent = document.getElementById("bola");
-    const divGanador = document.createElement("div");
-    divGanador.className = "winner";
-    divGanador.innerText = "PLAYER WINS!!";
-    parent.appendChild(divGanador);
+    ganador("PLAYER");
   }
   if (totalCpu === 15) {
-    startButton.classList.add("hide");
-    const parent = document.getElementById("bola");
-    const divGanador = document.createElement("div");
-    divGanador.className = "winner";
-    divbola.innerText = "CPU WINS!!";
-    parent.appendChild(divGanador);
+    ganador("CPU");
   }
+}
+
+function ganador(playerGanador) {
+  startButton.classList.add("hide");
+  const parent = document.getElementById("bola");
+  const divGanador = document.createElement("div");
+  divGanador.className = "winner";
+  divGanador.innerText = `${playerGanador} WINS!!`;
+  parent.appendChild(divGanador);
+  const myCanvas = document.createElement("canvas");
+  document.body.append(myCanvas);
+  const myConfetti = confetti.create(myCanvas, {
+    resize: true,
+    useWorker: true
+  });
+  myConfetti({
+    particleCount: 100,
+    spread: 160
+    // any other options from the global
+    // confetti function
+  });
 }
